@@ -1,0 +1,47 @@
+32 bit instruction
+processor sends to ALU/FP/Branching/Comparision depening on opcode 
+
+Corresponding unit uses it 
+op->code 6 bit
+
+R-Type:
+op   rs   rt    rd    shift  
+6    5	  5	    5     11	
+
+I-type: 
+op   rs   rt   address  
+6    5     5   16
+
+J-type:
+
+j  address
+6  26 
+
+
+
+	000   001    010   011   100    101    110   111 (last 3 bits)
+
+000 add   addu   and   xor   addi   addiu  andi  xori
+
+001	sub   subu   or          sll    srl    ori         
+ 
+010	not   mul    madd  maddu sla    sra    
+
+011	 j           jr          jal    lw     sw   lui 
+
+100	 bgte  bgt   bleq  ble   beq    bneq   slt  slti
+ 
+101	       bgtu        bleu  seq             
+
+110	add.s  leseq less  eq    mov.s  mfc1
+
+111	sub.s  gre   geq          	mtc1
+
+(first 
+3 bits)
+
+
+ 
+
+
+
