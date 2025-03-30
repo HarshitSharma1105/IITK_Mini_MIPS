@@ -12,9 +12,8 @@ module main;
         .reset(reset)
     );
 
-    // Clock Generation (50 MHz = 20 ns period)
     always #40 clk = ~clk;
-
+    //always #1 $display("time=%d,alu=%d,branch=%d,jump=%d,mem=%d",$time,dut.alu,dut.branch,dut.jump,dut.mem);
     initial begin
         // Initialize clock and reset
         clk = 0;
@@ -24,7 +23,7 @@ module main;
         #20 reset = 0;
 
         // Run simulation for a while
-        #700 $finish;
+        #300 $finish;
     end
 
     

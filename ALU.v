@@ -6,14 +6,17 @@ wire [4:0] rd=instruction[15:11];
 wire [10:0] shift=instruction[10:0];
 wire [15:0] immediate=instruction[15:0];
 
-always @(posedge clk) begin
+always @(posedge alu) begin
 
-   
+    
     
     if(alu) begin
-    $display("alu = %d,instruction = %b,rs = %d ,rt = %d, rd= %d,shift=%d,immediate=%d",alu,instruction,rs,rt,rd,shift,immediate);
+      $display("alu = %d,instruction = %b,rs = %d ,rt = %d, rd= %d,shift=%d,immediate=%d  time = %d",alu,instruction,rs,rt,rd,shift,immediate,$time);
     end
+    
 end
+
+
 
 
 endmodule

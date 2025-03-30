@@ -53,6 +53,12 @@ module control_unit(
 
 
   always @(*) begin
+    alu<=0;
+    float<=0;
+    branch<=0;
+    mem<=0;
+    jump<=0;
+
     alu<=(first<3'b011);
     branch<=first[2]&~first[1];
     float<=first[2]&first[1];

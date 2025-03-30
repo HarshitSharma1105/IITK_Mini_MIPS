@@ -43,6 +43,8 @@ module IITK_Mini_MIPS(input clk,input reset);
 
 always @(posedge clk) begin
     instruction <= instruction_memory[PC];
+    $display("time = %d,instruction = %b,alu=%d,jump=%d,mem=%d,branch=%d",$time,instruction,alu,jump,mem,branch);
+
 		PC<=PC+1;
 end
   
